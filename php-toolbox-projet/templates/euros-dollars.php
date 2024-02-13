@@ -107,8 +107,10 @@ template('header', array(
                     });
 
                     const result = await response.json();
+                    
 
                     let inputName = Object.keys(result.data)[0];
+                    
 
                     event.t
                 })

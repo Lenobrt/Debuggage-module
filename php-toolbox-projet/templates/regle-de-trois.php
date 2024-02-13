@@ -34,7 +34,7 @@ template('header', array(
                             </div>
 
                             <div class="d-inline-flex align-items-center">
-                                <span class="ver"> ----> </span>
+                                <span class="ver"> ---> </span>
                             </div>
                             <div class="col">
                                 <label for="c" aria-hidden="true" hidden>Nombre C</label>
@@ -53,7 +53,7 @@ template('header', array(
                             </div>
 
                             <div class="d-inline-flex align-items-center">
-                                <span class="ver"> ----> </span>
+                                <span class="ver"> ---> </span>
                             </div>
                             <div class="col">
                                 <label for="d" aria-hidden="true" hidden>Nombre D</label>
@@ -99,7 +99,8 @@ template('header', array(
                 let inputName = Object.keys(result.data)[0];
 
                 event.target.querySelector(`input[name="${inputName}"]`).value = result.data[inputName];
-        }
+        })
+    }
     });
 </script>
 
