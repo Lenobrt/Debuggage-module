@@ -34,7 +34,7 @@ template('header', array(
                             <div class="col">
                                 <label for="USD" aria-hidden="true" hidden>Dollars</label>
                                 <div class="input-group">
-                                    <input id="USD" name="USD" type="text" class="form-control" disabled>
+                                    <input id="USD2" name="USD2" type="text" class="form-control" >
                                     <div class="input-group-append">
                                         <div class="input-group-text">$</div>
                                     </div>
@@ -70,7 +70,7 @@ template('header', array(
                             <div class="col">
                                 <label for="EUR" aria-hidden="true" hidden>Euros</label>
                                 <div class="input-group">
-                                    <input id="EUR" name="EUR" type="text" class="form-control" disabled>
+                                    <input id="EUR2" name="EUR2" type="text" class="form-control" >
                                     <div class="input-group-append">
                                         <div class="input-group-text">€</div>
                                     </div>
@@ -110,9 +110,9 @@ template('header', array(
                     
 
                     let inputName = Object.keys(result.data)[0];
+                  
+                    event.target.querySelector(`input[id="${inputName}2"]`).value = result.data[inputName];
                     
-
-                    event.t
                 })
             }
         });

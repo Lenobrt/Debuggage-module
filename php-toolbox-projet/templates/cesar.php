@@ -41,7 +41,7 @@ template('header', array(
                             <div class="col-12 mt-4">
                                 <label for="key">Clé</label>
                                 <div class="input-group">
-                                    <input id="key" name="key" type="number" class="form-control">
+                                    <input id="key" min="0" max="26" name="key" type="number" class="form-control">
                                 </div>
                             </div>
 
@@ -73,7 +73,7 @@ template('header', array(
                             <div class="col-12 mt-4">
                                 <label for="key">Clé</label>
                                 <div class="input-group">
-                                    <input id="key" name="key" type="number" class="form-control" >
+                                    <input id="key" name="key" min="0" max="26" type="number" class="form-control" >
                                 </div>
                             </div>
 

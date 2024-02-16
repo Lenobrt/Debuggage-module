@@ -74,13 +74,13 @@ if (!empty($_POST)) {
                             <div class="col-md-6">
                                 <div class="md-form mb-0">
                                     <label for="name" class="">Votre nom</label>
-                                    <input type="text" id="name" name="name" class="form-control">
+                                    <input type="text" pattern="[A-Za-z]*" id="name" name="name" class="form-control">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="md-form mb-0">
                                     <label for="email" class="">Votre email (pour vous répondre)</label>
-                                    <input type="text" id="email" name="email" class="form-control">
+                                    <input type="email"  id="email" name="email" class="form-control">
                                 </div>
                             </div>
                         </div>

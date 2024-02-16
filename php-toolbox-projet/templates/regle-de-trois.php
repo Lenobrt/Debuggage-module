@@ -29,17 +29,17 @@ template('header', array(
                             <div class="col">
                                 <label for="a" aria-hidden="true" hidden>Nombre A</label>
                                 <div class="input-group">
-                                    <input id="a" name="a" type="text" class="form-control">
+                                    <input id="a" pattern="^[0-9]*$" name="a" type="text" class="form-control">
                                 </div>
                             </div>
 
                             <div class="d-inline-flex align-items-center">
-                                <span class="ver"> ---> </span>
+                                <span class="ver"> --> </span>
                             </div>
                             <div class="col">
                                 <label for="c" aria-hidden="true" hidden>Nombre C</label>
                                 <div class="input-group">
-                                    <input id="c" name="c" type="text" class="form-control">
+                                    <input id="c" pattern="^[0-9]*$" name="c" type="text" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -48,12 +48,12 @@ template('header', array(
                             <div class="col">
                                 <label for="b" aria-hidden="true" hidden>Nombre B</label>
                                 <div class="input-group">
-                                    <input id="b" name="b" type="text" class="form-control">
+                                    <input id="b" pattern="^[0-9]*$" name="b" type="text" class="form-control">
                                 </div>
                             </div>
 
                             <div class="d-inline-flex align-items-center">
-                                <span class="ver"> ---> </span>
+                                <span class="ver"> --> </span>
                             </div>
                             <div class="col">
                                 <label for="d" aria-hidden="true" hidden>Nombre D</label>

@@ -62,7 +62,9 @@ switch ($body->form){
         $c = $body->c;
 
         $result = ruleOfThird($a, $b, $c);
-
+       //Arrodir un chiffre à la virgule
+        $result['d']=round($result['d'],1);
+        
         $data = [
             'response' => 'success',
             'message' => 'Calcul réussi',
@@ -112,6 +114,6 @@ switch ($body->form){
         break;
 }
 
-logSubmitToDatabase($body, $result);
+//logSubmitToDatabase($body, $result);
 
 exit;

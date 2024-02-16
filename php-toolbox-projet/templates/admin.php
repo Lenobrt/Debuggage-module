@@ -82,6 +82,6 @@ $logs = select('logs');
 
     </div>
 </section>
-
+X
 
 <?php template('footer');
