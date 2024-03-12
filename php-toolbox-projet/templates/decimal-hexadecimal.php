@@ -36,7 +36,7 @@
                         </div>
 
                         <div class="col-12">
-                            <label for="hex">Héxadécimal</label>
+                            <label for="hex">Hexadécimal</label>
                             <div class="input-group">
                                 <input id="hex" name="hex" type="text"  class="form-control" disabled>
                             </div>
