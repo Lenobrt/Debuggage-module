@@ -92,27 +92,39 @@ switch ($body->form){
         ];
         echo json_encode($data);
         break;
-    case 'euros-dollars':
-
-        $EUR = null;
-        $USD = null;
-        if(property_exists($body, 'EUR')){
-            $EUR = $body->EUR;
+    case 'currency-converter':
+           
+        $amount = null;
+        $from_currency = null;
+        $to_currency = null; 
+            
+        if(property_exists($body, 'amount')){
+            $amount = $body->amount;
         }
-        if(property_exists($body, 'USD')){
-            $USD = $body->USD;
+        if(property_exists($body, 'from_currency')){ 
+            $from_currency = $body->from_currency;
         }
-
-        $result = convertEuroDollars($EUR, $USD);
-
-        $data = [
-            'response' => 'success',
-            'message' => 'Calcul réussi',
-            'data' => $result
-        ];
+        if(property_exists($body, 'to_currency')){ 
+            $to_currency = $body->to_currency;
+        }
+        
+        $result = convertCurrency($amount, $from_currency, $to_currency);
+        if(isset($result['error'])) {
+            $data = [
+                'response' => 'error',
+                'message' => $result['error']
+            ];
+        } else {
+            $data = [
+                'response' => 'success',
+                'message' => 'Conversion réussie',
+                'data' => $result
+            ];
+        }
+            
         echo json_encode($data);
         break;
-}
+}        
 
 //logSubmitToDatabase($body, $result);
 
